@@ -1,0 +1,23 @@
+.line {
+	display: block;
+	width: 38px;
+	height: 3px;
+	background: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%), #ffffff;
+}
+
+.content {
+	h3 {
+		margin-bottom: 26px;
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 75px;
+		letter-spacing: -0.04em;
+		color: #ffffff;
+	}
+	p {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 30px;
+		color: #81afdd;
+	}
+}

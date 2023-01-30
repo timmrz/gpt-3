@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+.features {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.titleSection {
+	max-width: 426px;
+	h2 {
+		@include bg-text;
+		margin-bottom: 34px;
+		font-weight: 800;
+		font-size: 34px;
+		line-height: 45px;
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 30px;
+		color: #ff8a71;
+	}
+}
+
+.list {
+	flex: 1;
+	max-width: 590px;
+	li {
+		width: 100%;
+		div {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			margin-bottom: 20px;
+
+			h3 {
+				margin-bottom: 0;
+				max-width: 182px;
+				margin-top: 4px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			p {
+				max-width: 334px;
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+}

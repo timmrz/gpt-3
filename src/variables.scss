@@ -1,0 +1,33 @@
+@mixin bg-animation {
+	/* ff 3.6+ */
+	background: -moz-linear-gradient(90deg, rgba(174, 103, 250, 1) 0%, rgba(244, 152, 103, 1) 49%, rgba(244, 152, 103, 1) 55%, rgba(174, 103, 250, 1) 100%);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-linear-gradient(90deg, rgba(174, 103, 250, 1) 0%, rgba(244, 152, 103, 1) 49%, rgba(244, 152, 103, 1) 55%, rgba(174, 103, 250, 1) 100%);
+
+	/* opera 11.10+ */
+	background: -o-linear-gradient(90deg, rgba(174, 103, 250, 1) 0%, rgba(244, 152, 103, 1) 49%, rgba(244, 152, 103, 1) 55%, rgba(174, 103, 250, 1) 100%);
+
+	/* ie 6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#AE67FA', endColorstr='#AE67FA', GradientType=0 );
+
+	/* ie 10+ */
+	background: -ms-linear-gradient(90deg, rgba(174, 103, 250, 1) 0%, rgba(244, 152, 103, 1) 49%, rgba(244, 152, 103, 1) 55%, rgba(174, 103, 250, 1) 100%);
+
+	/* global 94%+ browsers support */
+	background: linear-gradient(90deg, rgba(174, 103, 250, 1) 0%, rgba(244, 152, 103, 1) 49%, rgba(244, 152, 103, 1) 55%, rgba(174, 103, 250, 1) 100%);
+	background-size: 200% auto;
+	animation: shine 8s linear infinite;
+	@keyframes shine {
+		to {
+			background-position: 200% center;
+		}
+	}
+}
+
+@mixin bg-text {
+	@include bg-animation;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}

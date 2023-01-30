@@ -1,0 +1,53 @@
+@import "../../variables.scss";
+
+.container {
+	max-width: 1044px;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 154px;
+}
+
+.bg {
+	height: 608px;
+
+	img {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.content {
+	padding-bottom: 19px;
+	max-width: 479px;
+	.pretitle {
+		margin-bottom: 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 30px;
+		color: #71e5ff;
+	}
+	h2 {
+		margin-bottom: 23px;
+		@include bg-text;
+		font-weight: 800;
+		font-size: 34px;
+		line-height: 45px;
+	}
+
+	.text {
+		margin-bottom: 31px;
+		color: #81afdd;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	.dopText {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 30px;
+		color: #ff8a71;
+	}
+}
