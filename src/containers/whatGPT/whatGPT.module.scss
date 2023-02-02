@@ -20,18 +20,29 @@
 
 	/* global 92%+ browsers support */
 	background: radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+	@media (max-width: 1050px) {
+		margin-bottom: 120px;
+		padding: 40px 30px;
+	}
 }
 
 .gptHeader {
 	div {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 		margin-bottom: 80px;
 
+		@media (max-width: 1050px) {
+			margin-bottom: 50px;
+		}
+
 		p {
+			flex: 1;
 			max-width: 731px;
 			padding-right: 20px;
+			margin-left: 40px;
 		}
 	}
 }
@@ -41,12 +52,22 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	margin-bottom: 92px;
+
+	@media (max-width: 1050px) {
+		margin-bottom: 60px;
+	}
 	h2 {
+		flex: 1;
 		max-width: 472px;
 		font-weight: 800;
 		font-size: 34px;
 		line-height: 45px;
 		@include bg-text;
+
+		@media (max-width: 870px) {
+			font-size: 28px;
+			margin-right: 20px;
+		}
 	}
 
 	p {
@@ -55,14 +76,42 @@
 		font-size: 16px;
 		line-height: 30px;
 		color: #ff8a71;
+		transition: font-size 300ms ease-in-out, color 300ms ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			font-size: 18px;
+			color: rgba(174, 103, 250, 1);
+		}
+
+		@media (max-width: 870px) {
+			font-size: 14px;
+			&:hover {
+				font-size: 16px;
+			}
+		}
 	}
 }
 
 .gptList {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
+
+	// @media (max-width: 1270px) {
+	// 	align-items: flex-start;
+	// }
+
 	li {
+		flex: 1;
 		max-width: 334px;
+
+		// @media (max-width: 1270px) {
+		// 	max-width: 250px;
+		// }
+	}
+
+	li:not(:last-of-type) {
+		margin-right: 20px;
 	}
 }

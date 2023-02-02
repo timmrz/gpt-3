@@ -10,10 +10,10 @@ const Header = () => {
 				<div className={styles.content}>
 					<h1>Let’s Build Something amazing with GPT-3 OpenAI</h1>
 					<p className={styles.description}>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-					<div className={styles.formBlock}>
+					<form className={styles.formBlock}>
 						<input type='email' placeholder='Your Email Address' required />
 						<button type='submit'>Get Started</button>
-					</div>
+					</form>
 					<div className={styles.peopleBlock}>
 						<img src={people} alt='people' />
 						<p>1,600 people requested access a visit in last 24 hours</p>

@@ -4,7 +4,6 @@ body {
 
 .bg {
 	padding-top: 55px;
-	padding-bottom: 126px;
 	width: 100%;
 
 	/* ff 3.6+ */
@@ -42,5 +41,10 @@ body {
 
 .container {
 	margin: 0 auto;
+	width: 100%;
 	max-width: 1170px;
+
+	@media (max-width: 1270px) {
+		padding: 0 50px;
+	}
 }

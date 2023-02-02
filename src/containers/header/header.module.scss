@@ -3,9 +3,21 @@
 .header {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 	margin-right: -110px;
 	margin-bottom: 78px;
+	@media (max-width: 1500px) {
+		margin-right: -50px;
+	}
+
+	@media (max-width: 1270px) {
+		margin-right: 0px;
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: 1050px) {
+		flex-direction: column;
+	}
 }
 
 .content {
@@ -13,6 +25,12 @@
 	padding: 103px 0 0 0;
 	width: 100%;
 	max-width: 614px;
+
+	@media (max-width: 1050px) {
+		max-width: 750px;
+		margin-bottom: 70px;
+		text-align: center;
+	}
 
 	h1 {
 		margin-bottom: 33px;
@@ -22,6 +40,16 @@
 		font-weight: 800;
 		font-size: 62px;
 		line-height: 75px;
+
+		@media (max-width: 1270px) {
+			font-size: 44px;
+			line-height: 1;
+		}
+
+		@media (max-width: 1050px) {
+			font-size: 60px;
+			line-height: 1.1;
+		}
 	}
 
 	.description {
@@ -51,6 +79,7 @@
 		font-size: 20px;
 		line-height: 27px;
 		color: #3d6184;
+		caret-color: #ff4820;
 	}
 
 	input::placeholder {
@@ -71,6 +100,12 @@
 		line-height: 27px;
 		color: #ffffff;
 		cursor: pointer;
+		transition: font-size 300ms ease-in-out, background 400ms ease-in-out;
+
+		&:hover {
+			font-size: 22px;
+			background: rgba(174, 103, 250, 1);
+		}
 	}
 }
 
@@ -94,7 +129,7 @@
 }
 
 .imgBlock {
-	flex: 1;
+	flex: 1 0;
 	user-select: none;
 	-webkit-animation: imgBlock 20s linear infinite both;
 	animation: imgBlock 20s linear infinite both;

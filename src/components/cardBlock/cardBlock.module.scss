@@ -1,0 +1,74 @@
+.card,
+.bigCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-height: 324px;
+	height: 100%;
+	cursor: pointer;
+	transition: transform 300ms ease-in-out;
+
+	@media (max-width: 1050px) {
+		min-height: 200px;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.bg {
+	flex: 1 1 131px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media (max-width: 1050px) {
+		flex: 1 1 80px;
+	}
+}
+
+.content {
+	flex: 1 1 193px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 7px 25px 14px;
+	width: 100%;
+	background: #042c54;
+	color: #fff;
+
+	@media (max-width: 1050px) {
+		flex: 1 1 120px;
+	}
+}
+
+.date,
+.text {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 35px;
+}
+
+.title {
+	font-weight: 800;
+	font-size: 19.3154px;
+	line-height: 30px;
+}
+
+.bigCard {
+	.bg {
+		flex: 1 1 288px;
+	}
+
+	.content {
+		flex: 1 1 408px;
+		padding: 33px 50px 27px 26px;
+	}
+
+	.title {
+		font-size: 25.11px;
+	}
+}

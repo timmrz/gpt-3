@@ -6,6 +6,8 @@ import Brands from "./components/brands/Brands";
 import Features from "./containers/features/Features";
 import Possibilities from "./containers/possibilities/Possibilities";
 import CTA from "./components/CTA/CTA";
+import Blog from "./containers/blog/Blog";
+import Footer from './containers/footer/Footer';
 
 function App() {
 	return (
@@ -18,6 +20,8 @@ function App() {
 				<Features />
 				<Possibilities />
 				<CTA />
+				<Blog />
+				<Footer />
 			</div>
 		</div>
 	);

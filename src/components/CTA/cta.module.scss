@@ -2,6 +2,7 @@
 
 .cta {
 	padding: 45px;
+	margin-bottom: 154px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -13,10 +14,16 @@
 	@include bg-animation;
 	animation-duration: 15s;
 
+	@media (max-width: 1270px) {
+		margin-bottom: 120px;
+	}
+
 	button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-shrink: 0;
+		margin-left: 30px;
 		width: 190px;
 		height: 60px;
 		background: #000000;
@@ -26,6 +33,11 @@
 		line-height: 30px;
 		color: #ffffff;
 		cursor: pointer;
+		transition: transform 300ms ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 }
 
