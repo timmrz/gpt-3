@@ -15,6 +15,10 @@
 	@media (max-width: 1050px) {
 		flex-direction: column;
 	}
+
+	@media (max-width: 540px) {
+		margin-bottom: 60px;
+	}
 }
 
 .bg {
@@ -35,6 +39,10 @@
 
 	@media (max-width: 870px) {
 		max-width: none;
+	}
+
+	@media (max-width: 600px) {
+		margin-bottom: 10px;
 	}
 }
 
@@ -57,6 +65,14 @@
 		font-size: 16px;
 		line-height: 30px;
 		color: #71e5ff;
+
+		@media (max-width: 480px) {
+			margin-bottom: 5px;
+		}
+
+		@media (max-width: 600px) {
+			font-size: 14px;
+		}
 	}
 	h2 {
 		margin-bottom: 23px;
@@ -74,6 +90,17 @@
 			font-size: 34px;
 			line-height: 45px;
 		}
+
+		@media (max-width: 600px) {
+			margin-bottom: 5px;
+			font-size: 32px;
+			line-height: 1.4;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 26px;
+			line-height: 1.2;
+		}
 	}
 
 	.text {
@@ -87,10 +114,13 @@
 			margin-bottom: 15px;
 		}
 
-		@media (max-width: 1050px) {
-			font-size: 16px;
-			line-height: 30px;
+		@media (max-width: 480px) {
+			font-size: 14px;
+			margin-bottom: 5 px;
 		}
+
+		// @media (max-width: 600px) {
+		// }
 	}
 
 	.dopText {
@@ -104,6 +134,13 @@
 		&:hover {
 			font-size: 18px;
 			color: rgba(174, 103, 250, 1);
+		}
+
+		@media (max-width: 870px) {
+			font-size: 14px;
+			&:hover {
+				font-size: 16px;
+			}
 		}
 	}
 }

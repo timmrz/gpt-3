@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .title {
-	margin-bottom: 115px;
+	margin-bottom: 45px;
 	max-width: 700px;
 	@include bg-text;
 	font-weight: 800;
@@ -13,6 +13,25 @@
 	@media (max-width: 1270px) {
 		margin-bottom: 30px;
 	}
+
+	@media (max-width: 1050px) {
+		font-size: 54px;
+		line-height: 1.3;
+		margin-bottom: 25px;
+	}
+
+	@media (max-width: 720px) {
+		font-size: 40px;
+		line-height: 1.4;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	@media (max-width: 540px) {
+		font-size: 32px;
+		line-height: 1.4;
+		margin-bottom: 15px;
+	}
 }
 
 .grid {
@@ -23,9 +42,36 @@
 	grid-row-gap: 50px;
 	margin-bottom: 155px;
 
+	@media (max-width: 1050px) {
+		margin-bottom: 120px;
+	}
+
+	@media (max-width: 540px) {
+		margin-bottom: 60px;
+	}
+
 	@media (max-width: 1270px) {
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
+	}
+
+	@media (max-width: 600px) {
+		margin-bottom: 100px;
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		.div1,
+		.div2,
+		.div3,
+		.div4,
+		.div5 {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding: 0 20px;
+			max-width: 440px;
+		}
 	}
 }
 
@@ -47,7 +93,6 @@
 
 @media (max-width: 1050px) {
 	.grid {
-		display: grid;
 		grid-template-columns: 6fr 4fr;
 		grid-template-rows: repeat(6, 1fr);
 		grid-column-gap: 20px;
@@ -68,5 +113,28 @@
 	}
 	.div5 {
 		grid-area: 5 / 1 / 7 / 2;
+	}
+}
+
+@media (max-width: 720px) {
+	.grid {
+		grid-template-columns: 10fr 8fr;
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	.div1 {
+		grid-area: 1 / 1 / 3 / 2;
+	}
+	.div2 {
+		grid-area: 1 / 2 / 2 / 3;
+	}
+	.div3 {
+		grid-area: 2 / 2 / 3 / 3;
+	}
+	.div4 {
+		grid-area: 3 / 1 / 4 / 2;
+	}
+	.div5 {
+		grid-area: 3 / 2 / 4 / 3;
 	}
 }

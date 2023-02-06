@@ -55,6 +55,10 @@
 	height: 100%;
 	margin-left: 100px;
 
+	@media (max-width: 720px) {
+		display: none;
+	}
+
 	p,
 	button {
 		font-weight: 500;
@@ -89,17 +93,88 @@
 }
 
 .burger {
+	z-index: 15;
 	display: none;
+	right: 0;
 	width: 40px;
 	height: 40px;
 	color: #fff;
 	margin-left: 26px;
+	cursor: pointer;
 	svg {
 		height: 100%;
 		width: 100%;
+		fill: #fff;
+	}
+	path {
+		stroke: #fff;
+	}
+
+	@media (max-width: 1270px) {
+		right: 50px;
+	}
+
+	@media (max-width: 540px) {
+		right: 35px;
+	}
+
+	@media (max-width: 460px) {
+		right: 25px;
+	}
+
+	@media (max-width: 400px) {
+		right: 15px;
 	}
 
 	@media (max-width: 1050px) {
 		display: block;
+	}
+}
+
+.openBurger {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: #031b34;
+
+	.buttons {
+		display: none;
+		height: auto;
+		padding: 30px;
+		margin-left: 40px;
+
+		@media (max-width: 720px) {
+			display: flex;
+			margin-left: 10px;
+			button {
+				width: 120px;
+			}
+		}
+	}
+
+	li {
+		padding: 30px;
+		text-align: center;
+	}
+	a {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 25px;
+		color: #fff;
+		cursor: pointer;
+		transition: font-size 300ms ease-in-out, color 300ms ease-in-out;
+
+		&:hover {
+			font-size: 20px;
+			color: rgba(244, 152, 103, 1);
+		}
 	}
 }

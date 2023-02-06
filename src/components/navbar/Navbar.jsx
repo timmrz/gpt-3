@@ -2,28 +2,7 @@ import React, { useState } from "react";
 import styles from "./navbar.module.scss";
 import logo from "../../assets/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
-
-const Menu = () => {
-	return (
-		<ul>
-			<li>
-				<a href=''>Home</a>
-			</li>
-			<li>
-				<a href=''>What is GPT?</a>
-			</li>
-			<li>
-				<a href=''>Open AI</a>
-			</li>
-			<li>
-				<a href=''>Case Studies</a>
-			</li>
-			<li>
-				<a href=''>Library</a>
-			</li>
-		</ul>
-	);
-};
+import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
 	const [burgerOpened, setBurgerOpened] = useState(false);
@@ -35,16 +14,66 @@ const Navbar = () => {
 					<img src={logo} alt='logo' className={styles.logo} />
 				</div>
 				<nav className={styles.nav}>
-					<Menu />
+					<ul>
+						<li>
+							<a href='#home'>Home</a>
+						</li>
+						<li>
+							<a href='#whatGPT'>What is GPT?</a>
+						</li>
+						<li>
+							<a href='#openAI'>Open AI</a>
+						</li>
+						<li>
+							<a href='#case'>Case Studies</a>
+						</li>
+						<li>
+							<a href='#library'>Library</a>
+						</li>
+					</ul>
 				</nav>
 				<div className={styles.buttons}>
 					<p>Sign in</p>
 					<button>Sign up</button>
 				</div>
-				<div className={styles.burger}>
-					<GiHamburgerMenu />
-					{burgerOpened && <Menu />}
+				<div style={{ position: `${burgerOpened ? "fixed" : "static"}` }} className={styles.burger} onClick={() => setBurgerOpened(!burgerOpened)}>
+					{burgerOpened ? <GrClose /> : <GiHamburgerMenu />}
 				</div>
+				{burgerOpened && (
+					<div className={styles.openBurger}>
+						<ul>
+							<li>
+								<a onClick={() => setBurgerOpened(false)} href='#home'>
+									Home
+								</a>
+							</li>
+							<li>
+								<a onClick={() => setBurgerOpened(false)} href='#whatGPT'>
+									What is GPT?
+								</a>
+							</li>
+							<li>
+								<a onClick={() => setBurgerOpened(false)} href='#openAI'>
+									Open AI
+								</a>
+							</li>
+							<li>
+								<a onClick={() => setBurgerOpened(false)} href='#case'>
+									Case Studies
+								</a>
+							</li>
+							<li>
+								<a onClick={() => setBurgerOpened(false)} href='#library'>
+									Library
+								</a>
+							</li>
+							<div className={styles.buttons}>
+								<p>Sign in</p>
+								<button>Sign up</button>
+							</div>
+						</ul>
+					</div>
+				)}
 			</div>
 		</div>
 	);

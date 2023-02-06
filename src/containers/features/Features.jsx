@@ -4,7 +4,7 @@ import styles from "./features.module.scss";
 
 const Features = () => {
 	return (
-		<div className='container'>
+		<div id='openAI' className='container'>
 			<div className={styles.features}>
 				<div className={styles.titleSection}>
 					<h2>The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</h2>

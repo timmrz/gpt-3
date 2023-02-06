@@ -16,6 +16,14 @@
 	&:hover {
 		transform: scale(1.05);
 	}
+
+	@media (max-width: 600px) {
+		max-width: 440px;
+	}
+
+	@media (max-width: 540px) {
+		max-width: 380px;
+	}
 }
 
 .bg {
@@ -24,8 +32,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	@media (max-width: 1050px) {
-		flex: 1 1 80px;
+	@media (max-width: 600px) {
+		flex-basis: 150px;
+	}
+
+	@media (max-width: 540px) {
+		flex-basis: 130px;
 	}
 }
 
@@ -40,8 +52,9 @@
 	background: #042c54;
 	color: #fff;
 
-	@media (max-width: 1050px) {
-		flex: 1 1 120px;
+	@media (max-width: 540px) {
+		flex-basis: 165px;
+		padding: 7px 25px;
 	}
 }
 
@@ -56,19 +69,26 @@
 	font-weight: 800;
 	font-size: 19.3154px;
 	line-height: 30px;
+
+	@media (max-width: 540px) {
+		font-size: 16px;
+		line-height: 1.5;
+	}
 }
 
-.bigCard {
-	.bg {
-		flex: 1 1 288px;
-	}
+@media (min-width: 600px) {
+	.bigCard {
+		.bg {
+			flex: 1 1 288px;
+		}
 
-	.content {
-		flex: 1 1 408px;
-		padding: 33px 50px 27px 26px;
-	}
+		.content {
+			flex: 1 1 408px;
+			padding: 33px 50px 27px 26px;
+		}
 
-	.title {
-		font-size: 25.11px;
+		.title {
+			font-size: 25.11px;
+		}
 	}
 }

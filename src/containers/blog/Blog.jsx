@@ -9,7 +9,7 @@ import blog5 from "../../assets/blog05.png";
 
 const Blog = () => {
 	return (
-		<div className='container'>
+		<div id='library' className='container'>
 			<h2 className={styles.title}>A lot is happening, We are blogging about it.</h2>
 			<div className={styles.grid}>
 				<div className={styles.div1}>
